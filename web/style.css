@@ -1,0 +1,66 @@
+* {
+    background-color: #23272A;
+    font-family: "Poppins";
+}
+
+.title {
+    color: white;
+    position: absolute;
+    font-size: 4rem;
+    top: 7%;
+    left: 5%;
+}
+
+.genlist,
+.gendic,
+.genprint,
+.settings,
+.txt {
+    position: absolute;
+}
+
+.genlist {
+    top: 20%;
+    left: 7%;
+}
+
+.gendic {
+    top: 20%;
+    left: 15%;
+}
+
+.genprint {
+    top: 20%;
+    left: 26%;
+}
+
+.settings {
+    top: 40%;
+    left: 15%;
+    max-width: 25%;
+    border: solid white;
+    border-radius: 25px;
+    padding: 18px;
+}
+
+.txt {
+    top: 40%;
+    right: 15%;
+    width: 20%;
+    border: solid white;
+    border-radius: 25px;
+    padding: 18px;
+}
+
+.txttitle {
+    color: white;
+    font-size: 2rem;
+}
+
+.typetxt {
+    height: 40%;
+}
+
+.empty {
+    margin-bottom: 30%;
+}
