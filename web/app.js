@@ -1,7 +1,8 @@
 const title = document.querySelector(".title");
 const btnList = document.querySelector(".genlist");
 const btnDic = document.querySelector(".gendic");
-const btnPrint = document.querySelector(".genprint")
+const btnPrint = document.querySelector(".genprint");
+const btnElement =document.querySelector(".genelement");
 const txt = document.querySelector(".typetxt");
 
 btnList.addEventListener("click", () => {
@@ -62,4 +63,26 @@ btnPrint.addEventListener("click", () => {
     navigator.clipboard.writeText(result).then(function() {
         title.textContent = "Code Generated!";
     })
+})
+
+
+btnElement.addEventListener("click", () => {
+    let result = "";
+    let tmp = "";
+
+    if (document.querySelector(".dicchar").value === "/n") {
+        tmp = txt.value.split("\n");
+    } else {
+        tmp = txt.value.split(document.querySelector(".dicchar").value);
+    }
+
+    for (i = 0; i < tmp.length; i++) {
+        result += "<" + document.querySelector(".elementchar").value + " class='" + tmp[i].split(document.querySelector(".keychar").value)[0] + "'>" + tmp[i].split(document.querySelector(".keychar").value)[1] + "</" + document.querySelector(".elementchar").value + ">\n";
+    }
+
+    console.log(JSON.stringify(result));
+    navigator.clipboard.writeText(JSON.stringify(result)).then(function() {
+        title.textContent = "Code Generated!";
+    })
+
 })

@@ -11,27 +11,19 @@
     left: 5%;
 }
 
-.genlist,
-.gendic,
-.genprint,
+
 .settings,
-.txt {
+.txt,
+.gens {
     position: absolute;
 }
 
-.genlist {
+.gens{
+    display: flex;
+    justify-content: space-evenly;
     top: 20%;
     left: 7%;
-}
-
-.gendic {
-    top: 20%;
-    left: 15%;
-}
-
-.genprint {
-    top: 20%;
-    left: 26%;
+    width: 65%;
 }
 
 .settings {
@@ -66,7 +58,7 @@
     position: absolute;
     width: 30%;
     left: 35%;
-    bottom: 10%;
+    bottom: 6%;
     text-align: center;
     font-size: larger;
 }
